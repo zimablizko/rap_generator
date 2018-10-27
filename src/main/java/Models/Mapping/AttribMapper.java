@@ -2,6 +2,7 @@ package Models.Mapping;
 
 import Models.WordObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +10,6 @@ import java.util.Map;
 public class AttribMapper {
 
     public static Map attribMap = new HashMap<String,WordAttrib>();
-
     static {
         attribMap.put("NOUN", new WordAttrib("pos_id",1));
         attribMap.put("ADJF", new WordAttrib("pos_id",2));
@@ -74,9 +74,20 @@ public class AttribMapper {
         attribMap.put("Coun", new WordAttrib("spec_id",15));
     }
 
+    public static List<String> stopWords = new ArrayList<String>();
+    static{
+        stopWords.add("Abbr");
+        stopWords.add("Surn");
+        stopWords.add("Patr");
+        stopWords.add("Erro");
+        stopWords.add("Init");
+    }
+
     public static String getInsertQuery(WordObject wordObject){
         String query = "INSERT INTO words SET word='"+wordObject.getWord()+"', xml_id="+wordObject.getLemmaId()+", ";
         for (String attrib: wordObject.getAttribList()) {
+            if (stopWords.contains(attrib))
+                return "";
             if (attribMap.containsKey(attrib)){
                 query+= ((WordAttrib) attribMap.get(attrib)).getColName()+"="+((WordAttrib) attribMap.get(attrib)).getColValue()+",";
             }

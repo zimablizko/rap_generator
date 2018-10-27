@@ -70,13 +70,9 @@ public class XMLTest {
                                    // System.out.println(wordObj.toString());
                                     System.out.println(query);
                                 }
-
                             }
-
                         }
-
                 }
-
         } catch (ParserConfigurationException ex) {
             ex.printStackTrace(System.out);
         } catch (SAXException ex) {
