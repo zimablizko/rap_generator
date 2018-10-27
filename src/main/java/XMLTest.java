@@ -1,4 +1,7 @@
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
@@ -8,6 +11,7 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 
 import Models.Mapping.AttribMapper;
+
 import Models.WordObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -69,6 +73,20 @@ public class XMLTest {
                                     //System.out.println(AttribMapper.attribMap.entrySet());
                                    // System.out.println(wordObj.toString());
                                     System.out.println(query);
+
+                                    try {
+                                        DBConnection db=new DBConnection();
+                                        Statement stmt;
+                                        ResultSet rs;
+                                        stmt = db.start();
+                                        // executing SELECT query
+                                      //  rs = stmt.executeQuery(query);
+                                        rs = stmt.executeQuery("select 1 from dual");
+
+
+                                    } catch (SQLException sqlEx) {
+                                        sqlEx.printStackTrace();
+                                    }
                                 }
                             }
                         }
