@@ -7,9 +7,8 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathFactory;
 
+import DB.DBConnection;
 import Models.Mapping.AttribMapper;
 
 import Models.WordObject;
@@ -23,12 +22,17 @@ public class XMLTest {
 
     public static List<WordObject> wordList = new ArrayList<WordObject>();
 
+    public static DBConnection db=new DBConnection();
+
     public static void main(String[] args) {
         try {
+            Statement stmt;
+            ResultSet rs;
+            stmt = db.start();
             // Создается построитель документа
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             // Создается дерево DOM документа из файла
-            Document document = documentBuilder.parse("src/main/resources/xml/lemmas_test.xml");
+            Document document = documentBuilder.parse("src/main/resources/xml/lemmas3.xml");
 
             // Получаем корневой элемент
            // Node root = document.getDocumentElement();
@@ -67,27 +71,30 @@ public class XMLTest {
                                         Element eFormAttrib = (Element) formAttrib;
                                         wordObj.addAttrib(eFormAttrib.getAttribute("v"));
                                     }
+
                                         // System.out.println(e.getAttribute("t"));
                                     wordList.add(wordObj);
                                     String query = AttribMapper.getInsertQuery(wordObj);
                                     //System.out.println(AttribMapper.attribMap.entrySet());
                                    // System.out.println(wordObj.toString());
+                                   // if (wordObj.getLemmaId()>100) return;
                                     System.out.println(query);
-
-                                    try {
-                                        DBConnection db=new DBConnection();
-                                        Statement stmt;
-                                        ResultSet rs;
-                                        stmt = db.start();
-                                        // executing SELECT query
-                                      //  rs = stmt.executeQuery(query);
-                                        rs = stmt.executeQuery("select 1 from dual");
+                                    if (wordObj.getLemmaId()>219124) {
+                                        try {
 
 
-                                    } catch (SQLException sqlEx) {
-                                        sqlEx.printStackTrace();
+                                            // executing SELECT query
+                                            if (query != null)
+                                                stmt.execute(query);
+                                            // rs = stmt.executeQuery("select 1 from dual");
+
+
+                                        } catch (SQLException sqlEx) {
+                                            sqlEx.printStackTrace();
+                                        }
                                     }
                                 }
+
                             }
                         }
                 }

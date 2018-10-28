@@ -1,3 +1,5 @@
+package Models;
+
 public class Lemma {
     private int pos_id;
     private int case_id;
