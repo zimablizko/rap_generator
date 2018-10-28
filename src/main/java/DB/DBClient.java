@@ -122,7 +122,8 @@ public class DBClient {
                 else preposition="";
                 sentence+=preposition+word+" ";
         }
-        sentence+=endSign;
+        sentence = sentence.substring(0, 1).toUpperCase() + sentence.substring(1).toLowerCase();
+        sentence = sentence.substring(0,sentence.length()-1) + endSign;
         return sentence;
 
     }
