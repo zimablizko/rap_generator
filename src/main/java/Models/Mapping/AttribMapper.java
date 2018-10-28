@@ -64,10 +64,10 @@ public class AttribMapper {
         attribMap.put("futr", new WordAttrib("tense_id",3));
         attribMap.put("indc", new WordAttrib("incl_id",1));
         attribMap.put("impr", new WordAttrib("incl_id",2));
-        attribMap.put("Infr", new WordAttrib("spec_id",7));
+        /*attribMap.put("Infr", new WordAttrib("spec_id",7));
         attribMap.put("Slng", new WordAttrib("spec_id",8));
         attribMap.put("Arch", new WordAttrib("spec_id",9));
-        attribMap.put("Litr", new WordAttrib("spec_id",10));
+        attribMap.put("Litr", new WordAttrib("spec_id",10));*/
         attribMap.put("Ques", new WordAttrib("spec_id",13));
         attribMap.put("Dmns", new WordAttrib("spec_id",14));
         attribMap.put("Prnt", new WordAttrib("spec_id",12));
@@ -80,14 +80,17 @@ public class AttribMapper {
         stopWords.add("Surn");
         stopWords.add("Patr");
         stopWords.add("Erro");
-        stopWords.add("Init");
+        stopWords.add("Infr");
+        stopWords.add("Slng");
+        stopWords.add("Arch");
+        stopWords.add("Litr");
     }
 
     public static String getInsertQuery(WordObject wordObject){
         String query = "INSERT INTO words SET word='"+wordObject.getWord()+"', xml_id="+wordObject.getLemmaId()+", ";
         for (String attrib: wordObject.getAttribList()) {
             if (stopWords.contains(attrib))
-                return "";
+                return null;
             if (attribMap.containsKey(attrib)){
                 query+= ((WordAttrib) attribMap.get(attrib)).getColName()+"="+((WordAttrib) attribMap.get(attrib)).getColValue()+",";
             }
