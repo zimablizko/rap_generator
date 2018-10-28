@@ -1,6 +1,7 @@
 package DB;
 
 import Models.Lemma;
+import javafx.util.Pair;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -59,31 +60,11 @@ public class DBClient {
         return word;
     }
 
-    public static String getSentenceByTemplate(int templateId) {
-        String sentence = "";
-        ArrayList<String> wordTemplateIdList = new ArrayList<String>();
-        try {
-            ResultSet rs;
-            // executing SELECT query
-            String query = "select word_temp_id from sentences_collection where sentence_temp_id=" + templateId+" order by word_order asc";
-            rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                wordTemplateIdList.add(rs.getString(1));
-        }
-        }
-        catch (SQLException sqlEx) {
-            sqlEx.printStackTrace();
-        }
-
+    public static String getWordByTemplate(String templateId){
+        String word = "";
         ArrayList<String> wordList = new ArrayList<String>();
-
-        for (String wordTemplateId:wordTemplateIdList
-             ) {
-            try {
-                String word = "";
-                ResultSet rs2;
-                // executing SELECT query
-                String query2 = "select word from words w,words_templates wt where wt.id="+wordTemplateId +
+        try {
+        String query2 = "select word from words w,words_templates wt where wt.id="+templateId +
                 " and (w.pos_id = wt.pos_id OR wt.pos_id IS NULL)"+
                 " and (w.case_id =wt.case_id OR wt.case_id IS NULL)"+
                 " and (w.tense_id =wt.tense_id OR wt.tense_id IS NULL)"+
@@ -93,23 +74,55 @@ public class DBClient {
                 " and (w.tran_id=wt.tran_id OR wt.tran_id IS NULL)"+
                 " and (w.person_id=wt.person_id OR wt.person_id IS NULL)"+
                 " and (w.incl_id=wt.incl_id OR wt.incl_id IS NULL)"+
-                " and w.spec_id IS NULL";
-                rs2 = stmt.executeQuery(query2);
-                while (rs2.next()) {
-                    wordList.add(rs2.getString(1));
-                }
-                System.out.println(wordList.toString());
-                Random rnd = new Random();
-                int rndNum = rnd.nextInt(wordList.size() - 1);
-                word = wordList.get(rndNum);
-                sentence+=word+" ";
-                wordList.clear();
-            }
-            catch (SQLException sqlEx) {
-                sqlEx.printStackTrace();
+                " and (w.return_id=wt.return_id OR wt.return_id IS NULL)"+
+                " and ((w.spec_id=wt.spec_id OR wt.spec_id IS NULL) AND (w.spec_id IS NULL OR w.spec_id IN (12,13,14)))";
+        ResultSet rs2 = stmt.executeQuery(query2);
+        while (rs2.next()) {
+            wordList.add(rs2.getString(1));
+        }
+        Random rnd = new Random();
+        int rndNum = rnd.nextInt(wordList.size() - 1);
+        word = wordList.get(rndNum);
+        }
+        catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        }
+        return word;
+    }
+
+    public static String getSentenceByTemplate(int templateId) {
+        String sentence = "";
+        String endSign="";
+        ArrayList<Pair> wordTemplateIdList = new ArrayList<Pair>();
+        try {
+            ResultSet rs;
+            ResultSet esrs;
+            // executing SELECT query
+            String query = "select word_temp_id,preposition from sentences_collection where sentence_temp_id=" + templateId+" order by word_order asc";
+            String endSignQuery = "select end_sign from sentenсes_templates where id=" + templateId;
+            rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                wordTemplateIdList.add(new Pair(rs.getInt(1),rs.getString(2)));
+        }
+            esrs = stmt.executeQuery(endSignQuery);
+            while (esrs.next()) {
+                endSign=esrs.getString(1);
             }
         }
+        catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        }
 
+        for (Pair wordTemplate:wordTemplateIdList) {
+                String word=getWordByTemplate( wordTemplate.getKey().toString());
+                String preposition;
+                if (wordTemplate.getValue()!=null) {
+                        preposition =wordTemplate.getValue().toString()+ " ";
+                    }
+                else preposition="";
+                sentence+=preposition+word+" ";
+        }
+        sentence+=endSign;
         return sentence;
 
     }
