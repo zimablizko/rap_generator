@@ -124,6 +124,7 @@ public class DBClient {
         }
         sentence = sentence.substring(0, 1).toUpperCase() + sentence.substring(1).toLowerCase();
         sentence = sentence.substring(0,sentence.length()-1) + endSign;
+        sentence = sentence.replaceAll("/n","\n" );
         return sentence;
 
     }
