@@ -79,7 +79,7 @@ public class XMLTest {
                                    // System.out.println(wordObj.toString());
                                    // if (wordObj.getLemmaId()>100) return;
                                     System.out.println(query);
-                                    if (wordObj.getLemmaId()>219124) {
+                                    if (wordObj.getLemmaId()>333115) {
                                         try {
 
 
