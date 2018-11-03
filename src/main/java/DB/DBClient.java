@@ -82,6 +82,7 @@ public class DBClient {
                     " and (w.person_id=wt.person_id OR wt.person_id IS NULL)" +
                     " and (w.incl_id=wt.incl_id OR wt.incl_id IS NULL)" +
                     " and (w.return_id=wt.return_id OR wt.return_id IS NULL)" +
+                    " and (w.stress=wt.stress OR wt.stress IS NULL)" +
                     " and (w.syllable_count=wt.syllable_count OR wt.syllable_count IS NULL)" +
                     " and ((w.spec_id=wt.spec_id OR wt.spec_id IS NULL) AND (w.spec_id IS NULL OR w.spec_id IN (12,13,14)))";
             ResultSet rs2 = stmt.executeQuery(query2);
@@ -202,7 +203,7 @@ public class DBClient {
         try {
             ResultSet rs;
             // executing SELECT query  pos_id in (4,5,6,7,8,9,10) and
-            String query = "select id, word from words where syllable_count is null and id<1110000";
+            String query = "select id, word from words where syllable_count is null and id<1150000";
             rs = stmt.executeQuery(query);
             while (rs.next()) {
                 wordList.add(new Pair(rs.getInt(1), rs.getString(2)));

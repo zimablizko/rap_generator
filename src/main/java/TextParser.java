@@ -83,6 +83,10 @@ class TextParser {
                     if (!line.substring(0, 1).contains("[")) { //пропускаем первую строчку
                         line = line.toLowerCase();
                         line = line.replaceAll(",", " ");
+                        line = line.replaceAll("-", "");
+                        line = line.replaceAll("—", "");
+                        line = line.replaceAll("\"", "");
+                        line = line.replaceAll("\'", "");
                         line = line.replaceAll("\\.", "");
                         line = line.replaceAll("\\?", "");
                         line = line.replaceAll("\\!", "");
