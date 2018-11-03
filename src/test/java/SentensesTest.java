@@ -2,7 +2,10 @@ import DB.DBClient;
 import Models.Lemma;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.io.IOException;
+
 
 
 public class SentensesTest {
@@ -34,13 +37,11 @@ public class SentensesTest {
         System.out.println(sentense4);
     }
 
+    //Тест парсинга предложения в шаблоны
     @Test
     public void testGetSentenceTemplateFromText() {
-        String sentense= TextParser.getSentenceTemplateFromText("Владимирский вокзал - ветер северный");
+        String sentense= TextParser.getSentenceTemplateFromText("Владимирский централ - ветер северный");
 
-        String str = new String("qwqw /neeee");
-        System.out.println(str.replaceAll("/n",
-                "\n"));
         System.out.println(sentense);
     }
 
@@ -74,4 +75,14 @@ public class SentensesTest {
         DBClient.writeStressFromCSV();
         System.out.println();
     }
+
+    //Тест увеличения рейтинга популярности слова
+    @Test
+    public void testIncreaseWordPopularity() {
+
+        TextParser.increaseWordPopularity("ёж");
+
+        //System.out.println(sentense);
+    }
+
 }
