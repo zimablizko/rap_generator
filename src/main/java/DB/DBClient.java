@@ -202,7 +202,7 @@ public class DBClient {
         try {
             ResultSet rs;
             // executing SELECT query  pos_id in (4,5,6,7,8,9,10) and
-            String query = "select id, word from words where syllable_count is null and id<1075000";
+            String query = "select id, word from words where syllable_count is null and id<1110000";
             rs = stmt.executeQuery(query);
             while (rs.next()) {
                 wordList.add(new Pair(rs.getInt(1), rs.getString(2)));

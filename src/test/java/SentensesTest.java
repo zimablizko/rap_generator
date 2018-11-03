@@ -76,13 +76,4 @@ public class SentensesTest {
         System.out.println();
     }
 
-    //Тест увеличения рейтинга популярности слова
-    @Test
-    public void testIncreaseWordPopularity() {
-
-        TextParser.increaseWordPopularity("ёж");
-
-        //System.out.println(sentense);
-    }
-
 }
