@@ -2,3 +2,5 @@
 /target/*
 .idea/*
 /src/main/resources/xml/*
+/web/stress/config.php
+/.idea/workspace.xml
