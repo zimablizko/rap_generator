@@ -10,9 +10,9 @@ public class DBConnection {
 
 
     // JDBC URL, username and password of MySQL server
-    private static final String url = "jdbc:mysql://VH251.spaceweb.ru:3306/nklv94mail_rapgn";
-    private static final String user = "nklv94mail_rapgn";
-    private static final String password = "1q3w5e2a4s6d";
+    private static final String url = "jdbc:mysql://77.222.63.13:3306/nklv94mail_rapgn";
+    private static final String user = "db_admin";
+    private static final String password = "1111";
 
     // JDBC variables for opening and managing connection
     private static Connection con;
@@ -27,6 +27,7 @@ public class DBConnection {
         try {
             // opening database connection to MySQL server
             con = DriverManager.getConnection(url, user, password);
+
             // getting Statement object to execute query
             stmt = con.createStatement();
             // executing SELECT query
