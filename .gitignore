@@ -4,3 +4,5 @@
 /src/main/resources/xml/*
 /web/stress/config.php
 /.idea/workspace.xml
+/src/main/resources/app.properties
+/.idea/workspace.xml
