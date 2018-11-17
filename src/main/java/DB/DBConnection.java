@@ -1,18 +1,21 @@
 package DB;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
 
 public class DBConnection {
 
-
     // JDBC URL, username and password of MySQL server
-    private static final String url = "jdbc:mysql://VH251.spaceweb.ru:3306/nklv94mail_rapgn";
-    private static final String user = "nklv94mail_rapgn";
-    private static final String password = "1q3w5e2a4s6d";
+    private  String url;
+    private  String user;
+    private  String password;
 
     // JDBC variables for opening and managing connection
     private static Connection con;
@@ -23,6 +26,24 @@ public class DBConnection {
 
     public Statement start() {
         String query = "select 1 from dual";
+
+        try {
+            Properties prop = new Properties();
+            InputStream input = DBConnection.class.getClassLoader().getResourceAsStream("app.properties");
+
+            // load a properties file
+            prop.load(input);
+
+            // get the property value and print it out
+            url = prop.getProperty("db_url");
+            user = prop.getProperty("db_user");
+            password = prop.getProperty("db_password");
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+
 
         try {
             // opening database connection to MySQL server
