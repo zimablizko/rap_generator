@@ -13,15 +13,14 @@ import java.util.Properties;
 public class DBConnection {
 
     // JDBC URL, username and password of MySQL server
-    private  String url;
-    private  String user;
-    private  String password;
+    private String url;
+    private String user;
+    private String password;
 
     // JDBC variables for opening and managing connection
     private static Connection con;
     private static Statement stmt;
     private static ResultSet rs;
-
 
 
     public Statement start() {
@@ -30,39 +29,28 @@ public class DBConnection {
         try {
             Properties prop = new Properties();
             InputStream input = DBConnection.class.getClassLoader().getResourceAsStream("app.properties");
-
             // load a properties file
             prop.load(input);
-
             // get the property value and print it out
             url = prop.getProperty("db_url");
             user = prop.getProperty("db_user");
             password = prop.getProperty("db_password");
-
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
-
-
         try {
             // opening database connection to MySQL server
             con = DriverManager.getConnection(url, user, password);
-
             // getting Statement object to execute query
             stmt = con.createStatement();
             // executing SELECT query
             rs = stmt.executeQuery(query);
-            // while (rs.next()) {
-            //    int count = rs.getInt(1);
-            //    System.out.println("Total number of books in the table : " + count);
-            //}
 
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
             //  } finally {
             //close connection ,stmt and resultset here
-            ///      try {
+            //       try {
             //        con.close();
             //      } catch (SQLException se) { /*can't do anything */ }
             //      try {

@@ -1,4 +1,6 @@
-package Models.Mapping;
+package InitialXMLMapping.Models;
+
+//класс описывает пару столбец/значение из таблицы words
 
 public class WordAttrib {
     private String colName;

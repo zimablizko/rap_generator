@@ -1,15 +1,17 @@
-package Models.Mapping;
+package InitialXMLMapping;
 
-import Models.WordObject;
+import InitialXMLMapping.Models.WordAttrib;
+import InitialXMLMapping.Models.WordObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//маппер 4-символьных атрибутов из файла на значения из базы
 public class AttribMapper {
 
-    public static Map attribMap = new HashMap<String,WordAttrib>();
+    public static Map attribMap = new HashMap<String, WordAttrib>();
     static {
         attribMap.put("NOUN", new WordAttrib("pos_id",1));
         attribMap.put("ADJF", new WordAttrib("pos_id",2));
@@ -76,14 +78,14 @@ public class AttribMapper {
 
     public static List<String> stopWords = new ArrayList<String>();
     static{
-        stopWords.add("Abbr");
-        stopWords.add("Surn");
-        stopWords.add("Patr");
-        stopWords.add("Erro");
-        stopWords.add("Infr");
-        stopWords.add("Slng");
-        stopWords.add("Arch");
-        stopWords.add("Litr");
+        stopWords.add("Abbr"); //аббревиатуры
+        stopWords.add("Surn"); //фамилии
+        stopWords.add("Patr"); //отчества
+        stopWords.add("Erro"); //ошибочные
+        stopWords.add("Infr"); //неформальные
+        stopWords.add("Slng"); //слэнговые
+        stopWords.add("Arch"); //устаревшие
+        stopWords.add("Litr"); //литературные
     }
 
     public static String getInsertQuery(WordObject wordObject){
