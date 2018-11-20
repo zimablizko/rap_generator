@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1efbfa76-4bfa-47ee-bfe2-75fa33f4196b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DB/DBClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lemma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Lemma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Mapping/AttribMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Mapping/AttribMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sentenses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sentenses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SentensesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SentensesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/XMLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XMLTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,33 +49,47 @@
     <session id="878073311">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1207" />
+          <entry key="config" value="24" />
+          <entry key="dummy" value="55" />
+          <entry key="gitignore" value="7" />
+          <entry key="java" value="2231" />
           <entry key="xml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1207" />
+          <entry key="JAVA" value="2231" />
+          <entry key="PLAIN_TEXT" value="86" />
           <entry key="XML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="5" />
+          <entry key="config" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="18" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="5" />
+          <entry key="JAVA" value="18" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.21" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.21" value="2" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -91,40 +97,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/XMLTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-309">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Models/WordObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="306">
+              <caret line="26" column="42" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,65 +109,97 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Sentenses.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TextParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="158">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SentenсeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/DBClientTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/WordPatternTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-556">
+              <caret line="157" column="38" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TextParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBClient.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="103" column="43" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2747#2755#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Models/Lemma.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Models/Sentenсe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1190">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SentensesTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Models/Mapping/AttribMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/Ray.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+            <state relative-caret-position="323">
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -212,16 +220,32 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Models/Mapping/AttribMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Models/WordObject.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/XMLTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Sentenses.java" />
         <option value="$PROJECT_DIR$/src/main/java/DBClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/SentensesTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Models/Lemma.java" />
         <option value="$PROJECT_DIR$/src/test/java/SentensesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/app.config" />
+        <option value="$PROJECT_DIR$/src/main/java/XMLTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InitialXMLParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/WordObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/Lemma.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/Mapping/AttribMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Mapping/WordAttrib.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InitialXMLMapping/WordAttrib.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InitialXMLMapping/InitialXMLParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InitialXMLMapping/AttribMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InitialXMLMapping/Models/WordAttrib.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/WordPattern.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Sentenses.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Sentenсe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TextParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/DBClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/Sentenсe.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SentenсeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DBClientTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/WordPatternTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -254,10 +278,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="28" />
-    <option name="y" value="75" />
+    <option name="x" value="-8" />
     <option name="width" value="1400" />
-    <option name="height" value="996" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -265,9 +288,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -337,11 +357,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540730646770" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mcr.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542744231258" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -350,6 +373,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\GameDev\Other Projects\RapGenerator\rap_generator\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -364,28 +390,48 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SentensesTest.testGetSentenceByTemplate">
-    <configuration name="XMLTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="XMLTest" />
+  <component name="RunManager" selected="JUnit.SentenсeTest.testGenerate">
+    <configuration name="InitialXMLParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="InitialXMLMapping.InitialXMLParser" />
       <module name="RapGenerator" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SentensesTest.testGetSentenceByTemplate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SentenсeTest.testGenerate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RapGenerator" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SentensesTest" />
+      <option name="MAIN_CLASS_NAME" value="SentenсeTest" />
+      <option name="METHOD_NAME" value="testGenerate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SentenсeTest.testGetSentenceByTemplate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RapGenerator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SentenсeTest" />
       <option name="METHOD_NAME" value="testGetSentenceByTemplate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SentensesTest.testGetWordString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SentenсeTest.testGetSentenceTemplateFromText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RapGenerator" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SentensesTest" />
+      <option name="MAIN_CLASS_NAME" value="SentenсeTest" />
+      <option name="METHOD_NAME" value="testGetSentenceTemplateFromText" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SentenсeTest.testGetWordString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RapGenerator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SentenсeTest" />
       <option name="METHOD_NAME" value="testGetWordString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -393,15 +439,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.XMLTest" />
-      <item itemvalue="JUnit.SentensesTest.testGetWordString" />
-      <item itemvalue="JUnit.SentensesTest.testGetSentenceByTemplate" />
+      <item itemvalue="Application.InitialXMLParser" />
+      <item itemvalue="JUnit.SentenсeTest.testGetWordString" />
+      <item itemvalue="JUnit.SentenсeTest.testGetSentenceByTemplate" />
+      <item itemvalue="JUnit.SentenсeTest.testGetSentenceTemplateFromText" />
+      <item itemvalue="JUnit.SentenсeTest.testGenerate" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SentensesTest.testGetSentenceByTemplate" />
-        <item itemvalue="JUnit.SentensesTest.testGetWordString" />
-        <item itemvalue="Application.XMLTest" />
+        <item itemvalue="JUnit.SentenсeTest.testGenerate" />
+        <item itemvalue="JUnit.SentenсeTest.testGetSentenceTemplateFromText" />
+        <item itemvalue="JUnit.SentenсeTest.testGetSentenceByTemplate" />
+        <item itemvalue="JUnit.SentenсeTest.testGetWordString" />
+        <item itemvalue="Application.InitialXMLParser" />
       </list>
     </recent_temporary>
   </component>
@@ -419,42 +469,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 38m 26s.xml">
+    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.11.17 at 22h 54m 54s.xml">
       <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 38m 42s.xml">
+    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.11.17 at 22h 55m 09s.xml">
       <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 39m 18s.xml">
+    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.11.17 at 22h 55m 20s.xml">
       <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 39m 26s.xml">
+    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.11.17 at 23h 32m 57s.xml">
       <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 40m 35s.xml">
+    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.11.17 at 23h 33m 06s.xml">
       <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 41m 19s.xml">
+    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.11.17 at 23h 33m 17s.xml">
       <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 41m 28s.xml">
+    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.11.17 at 23h 33m 37s.xml">
       <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 42m 21s.xml">
-      <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
+    <history-entry file="SentenсeTest_testGetSentenceTemplateFromText - 2018.11.20 at 22h 28m 10s.xml">
+      <configuration name="SentenсeTest.testGetSentenceTemplateFromText" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 42m 27s.xml">
-      <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
+    <history-entry file="SentenсeTest_testGenerate - 2018.11.20 at 22h 38m 28s.xml">
+      <configuration name="SentenсeTest.testGenerate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentensesTest_testGetSentenceByTemplate - 2018.10.28 at 15h 42m 35s.xml">
-      <configuration name="SentensesTest.testGetSentenceByTemplate" configurationId="JUnit" />
+    <history-entry file="SentenсeTest_testGenerate - 2018.11.20 at 22h 38m 48s.xml">
+      <configuration name="SentenсeTest.testGenerate" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49782923" visible="true" weight="0.17537314" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49782923" visible="true" weight="0.18336888" />
       <window_info id="Structure" order="1" sideWeight="0.50217074" side_tool="true" weight="0.17537314" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -462,14 +512,14 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.2585837" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49840087" visible="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48880598" weight="0.2585837" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.2585837" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50159913" side_tool="true" visible="true" weight="0.32939914" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49946696" weight="0.32939914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -490,37 +540,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/d.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/f.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/zal.mcr">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/g.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-367">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/Mcr_applet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/d.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/f.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/zal.mcr" />
+    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/g.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/Mcr_applet.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Test.java" />
     <entry file="file://$USER_HOME$/.m2/settings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -536,92 +560,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Mapping/WordAttrib.java">
+    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/Ray.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/xml/other.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/app.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/xml/lemmas.xml">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/xml/SentencePatterns.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-          </folding>
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/mcr.jar!/ru/narod/macrocosm/mcr/Ray.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/xml/lemmas_test.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/InitialXMLMapping/InitialXMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/WordObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Mapping/AttribMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/InitialXMLMapping/AttribMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+        <state relative-caret-position="102">
+          <caret line="78" column="40" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/XMLTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/InitialXMLMapping/Models/WordAttrib.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InitialXMLMapping/Models/WordObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Lemma.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/WordPattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1190">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="-731">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Sentenses.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TextParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="544">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TextParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-309">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="306">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SentensesTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Sentenсe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+        <state relative-caret-position="323">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SentenсeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -630,12 +674,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="103" column="43" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
+        <state relative-caret-position="-556">
+          <caret line="157" column="38" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2747#2755#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DBClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/WordPatternTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>

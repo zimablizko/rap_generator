@@ -2,9 +2,6 @@
 /target/*
 .idea/*
 /src/main/resources/xml/*
+/src/main/resources/songs/*
 /web/stress/config.php
-/.idea/workspace.xml
 /src/main/resources/app.properties
-/.idea/workspace.xml
-/.idea
-
