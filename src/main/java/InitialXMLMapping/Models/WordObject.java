@@ -1,7 +1,9 @@
-package Models;
+package InitialXMLMapping.Models;
 
 import java.util.ArrayList;
 import java.util.List;
+
+//Класс описывает модель леммы и её атрибутов
 
 public class WordObject {
 

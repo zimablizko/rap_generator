@@ -1,11 +1,10 @@
 package DB;
 
-import Models.Lemma;
+import Models.WordPattern;
 import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.CSVWriter;
 import javafx.util.Pair;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,8 +12,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
+
+//класс, описывающий клиент для выполнения различных операцией с базой
+//TODO: возможно требуется переделка, слишком жирный и обобщенный класс
 
 public class DBClient {
 
@@ -22,32 +23,32 @@ public class DBClient {
     private static DBConnection db = new DBConnection();
     private static Statement stmt = db.start();
 
-    public static String getRandomWord(Lemma lemma) {
+    public static String getRandomWord(WordPattern wordPattern) {
 
         ArrayList<String> allwords = new ArrayList<String>();
         String word = "";
         try {
             ResultSet rs;
             // executing SELECT query
-            String query = "select word from words where pos_id=" + lemma.getPos_id();
-            if (lemma.getCase_id() != 0)
-                query += " and case_id=" + lemma.getCase_id();
-            if (lemma.getTense_id() != 0)
-                query += " and tense_id=" + lemma.getTense_id();
-            if (lemma.getGender_id() != 0)
-                query += " and gender_id=" + lemma.getGender_id();
-            if (lemma.getNum_id() != 0)
-                query += " and num_id=" + lemma.getNum_id();
-            if (lemma.getAnim_id() != 0)
-                query += " and anim_id=" + lemma.getAnim_id();
-            if (lemma.getTran_id() != 0)
-                query += " and tran_id=" + lemma.getTran_id();
-            if (lemma.getPerson_id() != 0)
-                query += " and person_id=" + lemma.getPerson_id();
-            if (lemma.getIncl_id() != 0)
-                query += " and incl_id=" + lemma.getIncl_id();
-            if (lemma.getSpec_id() != 0) {
-                query += " and spec_id=" + lemma.getSpec_id();
+            String query = "select word from words where pos_id=" + wordPattern.getPos_id();
+            if (wordPattern.getCase_id() != 0)
+                query += " and case_id=" + wordPattern.getCase_id();
+            if (wordPattern.getTense_id() != 0)
+                query += " and tense_id=" + wordPattern.getTense_id();
+            if (wordPattern.getGender_id() != 0)
+                query += " and gender_id=" + wordPattern.getGender_id();
+            if (wordPattern.getNum_id() != 0)
+                query += " and num_id=" + wordPattern.getNum_id();
+            if (wordPattern.getAnim_id() != 0)
+                query += " and anim_id=" + wordPattern.getAnim_id();
+            if (wordPattern.getTran_id() != 0)
+                query += " and tran_id=" + wordPattern.getTran_id();
+            if (wordPattern.getPerson_id() != 0)
+                query += " and person_id=" + wordPattern.getPerson_id();
+            if (wordPattern.getIncl_id() != 0)
+                query += " and incl_id=" + wordPattern.getIncl_id();
+            if (wordPattern.getSpec_id() != 0) {
+                query += " and spec_id=" + wordPattern.getSpec_id();
             } else {
                 query += " and spec_id IS NULL";
             }
@@ -271,6 +272,4 @@ public class DBClient {
             }
         }
     }
-
-
 }

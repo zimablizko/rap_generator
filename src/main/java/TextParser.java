@@ -2,7 +2,6 @@ import DB.DBConnection;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -10,6 +9,8 @@ import java.util.ArrayList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
+//Парсер текста в базу
 
 class TextParser {
 
@@ -35,8 +36,6 @@ class TextParser {
             } catch (SQLException sqlEx) {
                 sqlEx.printStackTrace();
             }
-
-
         }
         return finalList.toString();
     }
@@ -52,7 +51,6 @@ class TextParser {
                 sqlEx.printStackTrace();
             }
         }
-
     }
 
     public static ArrayList<String> fileReader(String fileName) {
