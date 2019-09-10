@@ -23,6 +23,7 @@ public class DBClient {
     private static DBConnection db = new DBConnection();
     private static Statement stmt = db.start();
 
+    //возвращает рандомное слово по заданному шаблону
     public static String getRandomWord(WordPattern wordPattern) {
 
         ArrayList<String> allwords = new ArrayList<String>();
@@ -113,7 +114,7 @@ public class DBClient {
             ResultSet rs;
             ResultSet esrs;
             // executing SELECT query
-            String query = "select word_temp_id,preposition from sentences_collection where sentence_temp_id=" + templateId + " order by word_order asc";
+            String query = "select word_id,preposition from sentences_collection where sentence_temp_id=" + templateId + " order by word_order asc";
             String endSignQuery = "select end_sign from sentenсes_templates where id=" + templateId;
             rs = stmt.executeQuery(query);
             while (rs.next()) {

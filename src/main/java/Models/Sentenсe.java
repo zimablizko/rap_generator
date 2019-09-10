@@ -1,19 +1,27 @@
 package Models;
 
 import DB.DBConnection;
+import lombok.Data;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Random;
 
 //класс, описывающий предложения и его методы
-
+@Data
 public class Sentenсe {
-    public static int[] partsOfSpeech = {2, 1, 3};
-    private static DBConnection db = new DBConnection();
-    private static Statement stmt = db.start();
+   int id;
+   String endSign;
+   String sample;
 
-   public String generate() {
+   ArrayList<Word> wordList = new ArrayList<>();
+
+
+   /*  public static int[] partsOfSpeech = {2, 1, 3};
+   private static DBConnection db = new DBConnection();
+    private static Statement stmt = db.start();*/
+
+  /* public String generate() {
         for (int i = 0; i < partsOfSpeech.length; i++) {
             ArrayList<String> allwords = new ArrayList<String>();
             try {
@@ -32,7 +40,7 @@ public class Sentenсe {
             }
         }
         return "  ";
-    }
+    }*/
 
 
 }

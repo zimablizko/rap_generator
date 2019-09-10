@@ -5,3 +5,5 @@
 /src/main/resources/songs/*
 /web/stress/config.php
 /src/main/resources/app.properties
+/.tmp.txt
+/.idea/*
