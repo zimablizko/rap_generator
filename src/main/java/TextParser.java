@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-//Парсер текста в базу
+//Парсер текста песен
 
 class TextParser {
 
@@ -18,6 +18,7 @@ class TextParser {
     private static Statement stmt = db.start();
 
     public static String getSentenceTemplateFromText(String rawText) {
+        //TODO: допилить регулярку, чтобы ловила спецсимволы
         String[] wordsArr = rawText.split(" ");
         ArrayList<String> wordList = new ArrayList<String>();
         ArrayList<String> finalList = new ArrayList<String>();
@@ -40,8 +41,10 @@ class TextParser {
         return finalList.toString();
     }
 
+    //Методы парсинга текстовых файлов целиком для изменения популярности слов
+
     public static void increasePopularityWordsBySong(String fileName) {
-        ArrayList<Integer> xmlIdList =getIdWordsFromSong(fileName);
+        ArrayList<Integer> xmlIdList = getWordsIdsFromFile(fileName);
         if (!xmlIdList.isEmpty()) {
             try {
                 String query = "update lemmas set popularity = popularity + 1 " +
@@ -53,7 +56,31 @@ class TextParser {
         }
     }
 
-    public static ArrayList<String> fileReader(String fileName) {
+    public static ArrayList<Integer> getWordsIdsFromFile(String fileName) {
+        ArrayList<Integer> xmlIdList = new ArrayList<Integer>();
+        ArrayList<String> songWords = getWordsFromFile(fileName);
+        String query = "select DISTINCT xml_id from words where word in (";
+
+        for (String word : songWords) {
+
+            query += "'" + word + "',";
+        }
+        query=query.substring(0, query.length() - 1);
+        query+=")";
+        try {
+            ResultSet rs;
+            rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                xmlIdList.add(rs.getInt(1));
+            }
+        } catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        }
+        System.out.println(xmlIdList.toString());
+        return xmlIdList;
+    }
+
+    public static ArrayList<String> getWordsFromFile(String fileName) {
         ArrayList<String> songWords = new ArrayList<String>();
         String tmpFileName = clearLyrics(fileName);
         try (Scanner scanner = new Scanner(new File(tmpFileName))) {
@@ -103,28 +130,8 @@ class TextParser {
         return tmpFileName;
     }
 
-    public static ArrayList<Integer> getIdWordsFromSong(String fileName) {
-        ArrayList<Integer> xmlIdList = new ArrayList<Integer>();
-        ArrayList<String> songWords = fileReader(fileName);
-        String query = "select DISTINCT xml_id from words where word in (";
+    //Методы парсинга текстовых файлов построчно для добавления в базу
 
-        for (String word : songWords) {
-
-            query += "'" + word + "',";
-        }
-        query=query.substring(0, query.length() - 1);
-        query+=")";
-        try {
-            ResultSet rs;
-            rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                xmlIdList.add(rs.getInt(1));
-            }
-        } catch (SQLException sqlEx) {
-            sqlEx.printStackTrace();
-        }
-        System.out.println(xmlIdList.toString());
-        return xmlIdList;
-    }
+    //COMING SOON
 }
 

@@ -2,6 +2,9 @@ package Models;
 
 //Класс описывает шаблон, по которому в дальнейшем ищется слово
 
+import lombok.Data;
+
+@Data
 public class WordPattern {
 
     private int pos_id;
@@ -15,83 +18,6 @@ public class WordPattern {
     private int person_id;
     private int incl_id;
 
-    public int getPos_id() { return pos_id; }
-
-    public void setPos_id(int pos_id) {
-        this.pos_id = pos_id;
-    }
-
-    public int getCase_id() {
-        return case_id;
-    }
-
-    public void setCase_id(int case_id) {
-        this.case_id = case_id;
-    }
-
-    public int getTense_id() {
-        return tense_id;
-    }
-
-    public void setTense_id(int tense_id) {
-        this.tense_id = tense_id;
-    }
-
-    public int getGender_id() {
-        return gender_id;
-    }
-
-    public void setGender_id(int gender_id) {
-        this.gender_id = gender_id;
-    }
-
-    public int getNum_id() {
-        return num_id;
-    }
-
-    public void setNum_id(int num_id) {
-        this.num_id = num_id;
-    }
-
-    public int getAnim_id() {
-        return anim_id;
-    }
-
-    public void setAnim_id(int anim_id) {
-        this.anim_id = anim_id;
-    }
-
-    public int getTran_id() {
-        return tran_id;
-    }
-
-    public void setTran_id(int tran_id) {
-        this.tran_id = tran_id;
-    }
-
-    public int getSpec_id() {
-        return spec_id;
-    }
-
-    public void setSpec_id(int spec_id) {
-        this.spec_id = spec_id;
-    }
-
-    public int getPerson_id() {
-        return person_id;
-    }
-
-    public void setPerson_id(int person_id) {
-        this.person_id = person_id;
-    }
-
-    public int getIncl_id() {
-        return incl_id;
-    }
-
-    public void setIncl_id(int incl_id) {
-        this.incl_id = incl_id;
-    }
 
     public WordPattern() {
         this.case_id = 0;
