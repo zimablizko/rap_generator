@@ -12,4 +12,8 @@ public class Word {
     WordPattern wordPattern;
     int stress;
     int syllableCount;
+
+    public Word (String Value){
+        value = Value;
+    }
 }

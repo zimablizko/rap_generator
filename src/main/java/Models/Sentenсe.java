@@ -16,6 +16,9 @@ public class Sentenсe {
 
    ArrayList<Word> wordList = new ArrayList<>();
 
+   public Sentenсe (ArrayList<Word> WordList){
+      wordList = WordList;
+   }
 
    /*  public static int[] partsOfSpeech = {2, 1, 3};
    private static DBConnection db = new DBConnection();

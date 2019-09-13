@@ -22,14 +22,14 @@ public class TextParserTest {
     @Test
     public void testGetIdWordsFromSong() {
 
-        TextParser.getWordsIdsFromFile("F:\\GameDev\\Other Projects\\RapGenerator\\rap_generator\\src\\main\\resources\\songs\\1.Чайф - Про бобра и барабан.txt");
+        TextParser.getLemmasIdsFromFile("F:\\GameDev\\Other Projects\\RapGenerator\\rap_generator\\src\\main\\resources\\songs\\1.Чайф - Про бобра и барабан.txt");
 
         //System.out.println(sentense);
     }
     @Test
     public void testIncreasePopularityWordsBySong() {
 
-        TextParser.increasePopularityWordsBySong("songs/2.Би2-Родина");
+        TextParser.increaseLemmasPopularityBySong("songs/2.Би2-Родина");
 
         //System.out.println(sentense);
     }
