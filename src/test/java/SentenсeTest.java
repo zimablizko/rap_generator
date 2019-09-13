@@ -40,7 +40,7 @@ public class SentenсeTest {
     //Тест парсинга файла с текстом на отдельные строки
     @Test
     public void testGetSentencesFromFile() throws IOException {
-        List<String> sentences= TextParser.getSentencesFromFile("F:\\GameDev\\Other Projects\\RapGenerator\\rap_generator\\src\\main\\resources\\songs\\1.Чайф - Про бобра и барабан.txt");
+        List<String> sentences= TextParser.getSentencesFromFile("1.Чайф - Про бобра и барабан.txt");
         String[] array = sentences.toArray(new String[0]);
         for (String sentence :array) System.out.println(sentence);
 

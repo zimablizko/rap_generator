@@ -88,12 +88,10 @@ class TextParser {
     public static ArrayList<String> getWordsFromFile(String fileName) {
         ArrayList<String> songWords = new ArrayList<String>();
         String tmpFileName = clearLyrics(fileName);
-        try (Scanner scanner = new Scanner(new File(tmpFileName))) {
+        try (Scanner scanner = new Scanner(TextParser.class.getResourceAsStream("/songs/"+fileName))) {
             while (scanner.hasNext()) {
                 songWords.add(scanner.next());
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         }
         return songWords;
     }
@@ -107,7 +105,7 @@ class TextParser {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try (Scanner scanner = new Scanner(new File(fileName))) {
+        try (Scanner scanner = new Scanner(TextParser.class.getResourceAsStream("/songs/"+fileName))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 if (line.length() > 0) {
@@ -139,7 +137,8 @@ class TextParser {
     //возвращает массив строк из файда
     public static List<String>  getSentencesFromFile(String fileName) throws IOException {
         List<String> rows = new ArrayList<String>();
-        Scanner in = new Scanner(new File(fileName));
+        //Scanner in = new Scanner(new File(fileName));
+        Scanner in = new Scanner(TextParser.class.getResourceAsStream("/songs/"+fileName));
         while (in.hasNextLine())
             rows.add(in.nextLine());
         //System.out.println(rows.toString());

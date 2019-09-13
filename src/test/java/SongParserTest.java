@@ -9,7 +9,7 @@ public class SongParserTest {
 
     @Test
     public void testCreateSong() throws IOException {
-        Song song = SongParser.createSong("F:\\GameDev\\Other Projects\\RapGenerator\\rap_generator\\src\\main\\resources\\songs\\1.Чайф - Про бобра и барабан.txt");
+        Song song = SongParser.createSong("1.Чайф - Про бобра и барабан.txt");
         System.out.println(song);
     }
 
