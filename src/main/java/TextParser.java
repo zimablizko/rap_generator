@@ -2,12 +2,16 @@ import DB.DBConnection;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.Scanner;
 
 //Парсер текста песен
@@ -27,11 +31,12 @@ class TextParser {
         for (String word : wordList) {
             try {
                 ResultSet rs;
-                String query = "select word, pos_id, case_id, tense_id, gender_id, num_id, anim_id, tran_id, spec_id, person_id, incl_id, return_id " +
+                String query = "select word, id, xml_id, pos_id, case_id, tense_id, gender_id, num_id, anim_id, tran_id, spec_id, person_id, incl_id, return_id " +
                         "from words where word=lower('" + word + "')";
                 //System.out.println(query);
                 rs = stmt.executeQuery(query);
                 while (rs.next()) {
+                    //TODO: тут надо подумать, как быстро определять падеж существительного (и наверняка что-то еще)
                     finalList.add(rs.getString(1));
                 }
             } catch (SQLException sqlEx) {
@@ -43,8 +48,8 @@ class TextParser {
 
     //Методы парсинга текстовых файлов целиком для изменения популярности слов
 
-    public static void increasePopularityWordsBySong(String fileName) {
-        ArrayList<Integer> xmlIdList = getWordsIdsFromFile(fileName);
+    public static void increaseLemmasPopularityBySong(String fileName) {
+        ArrayList<Integer> xmlIdList = getLemmasIdsFromFile(fileName);
         if (!xmlIdList.isEmpty()) {
             try {
                 String query = "update lemmas set popularity = popularity + 1 " +
@@ -56,7 +61,7 @@ class TextParser {
         }
     }
 
-    public static ArrayList<Integer> getWordsIdsFromFile(String fileName) {
+    public static ArrayList<Integer> getLemmasIdsFromFile(String fileName) {
         ArrayList<Integer> xmlIdList = new ArrayList<Integer>();
         ArrayList<String> songWords = getWordsFromFile(fileName);
         String query = "select DISTINCT xml_id from words where word in (";
@@ -83,16 +88,15 @@ class TextParser {
     public static ArrayList<String> getWordsFromFile(String fileName) {
         ArrayList<String> songWords = new ArrayList<String>();
         String tmpFileName = clearLyrics(fileName);
-        try (Scanner scanner = new Scanner(new File(tmpFileName))) {
+        try (Scanner scanner = new Scanner(TextParser.class.getResourceAsStream("/songs/"+fileName))) {
             while (scanner.hasNext()) {
                 songWords.add(scanner.next());
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         }
         return songWords;
     }
 
+    //возвращает имя временного файла, содержащего очищенный текст песни
     public static String clearLyrics(String fileName) {
         FileWriter writer = null;
         String tmpFileName = fileName.substring(0, fileName.indexOf(".")) + ".tmp.txt";
@@ -101,25 +105,23 @@ class TextParser {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try (Scanner scanner = new Scanner(new File(fileName))) {
+        try (Scanner scanner = new Scanner(TextParser.class.getResourceAsStream("/songs/"+fileName))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 if (line.length() > 0) {
                     if (!line.substring(0, 1).contains("[")) { //пропускаем первую строчку
-                        line = line.toLowerCase();
-                        line = line.replaceAll(",", " ");
-                        line = line.replaceAll("-", "");
-                        line = line.replaceAll("—", "");
-                        line = line.replaceAll("\"", "");
-                        line = line.replaceAll("\'", "");
-                        line = line.replaceAll("\\.", "");
-                        line = line.replaceAll("\\?", "");
-                        line = line.replaceAll("\\!", "");
-                        line = line.replaceAll(":", "");
-
+                            line = line.toLowerCase();
+                            line = line.replaceAll(",", " ");
+                            line = line.replaceAll("-", "");
+                            line = line.replaceAll("—", "");
+                            line = line.replaceAll("\"", "");
+                            line = line.replaceAll("\'", "");
+                            line = line.replaceAll("\\.", "");
+                            line = line.replaceAll("\\?", "");
+                            line = line.replaceAll("\\!", "");
+                            line = line.replaceAll(":", "");
                         writer.write(line);
                         writer.append('\n');
-
                     }
                 }
             }
@@ -132,6 +134,18 @@ class TextParser {
 
     //Методы парсинга текстовых файлов построчно для добавления в базу
 
-    //COMING SOON
+    //возвращает массив строк из файда
+    public static List<String>  getSentencesFromFile(String fileName) throws IOException {
+        List<String> rows = new ArrayList<String>();
+        //Scanner in = new Scanner(new File(fileName));
+        Scanner in = new Scanner(TextParser.class.getResourceAsStream("/songs/"+fileName));
+        while (in.hasNextLine())
+            rows.add(in.nextLine());
+        //System.out.println(rows.toString());
+       // String[] array = rows.toArray(new String[0]);
+        return rows;
+    }
+
+
 }
 

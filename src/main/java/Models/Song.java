@@ -7,4 +7,8 @@ import java.util.ArrayList;
 @Data
 public class Song {
     ArrayList<Sentenсe> sentenceList = new ArrayList<>();
+
+    public Song (ArrayList<Sentenсe> SentenceList){
+        sentenceList = SentenceList;
+    }
 }

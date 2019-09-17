@@ -2,6 +2,10 @@ import DB.DBClient;
 import Models.Sentenсe;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class SentenсeTest {
 
    /* @Test
@@ -31,5 +35,14 @@ public class SentenсeTest {
     public void testGetSentenceTemplateFromText() {
         String sentence= TextParser.getSentenceTemplateFromText("Владимирский централ - ветер северный");
         System.out.println(sentence);
+    }
+
+    //Тест парсинга файла с текстом на отдельные строки
+    @Test
+    public void testGetSentencesFromFile() throws IOException {
+        List<String> sentences= TextParser.getSentencesFromFile("1.Чайф - Про бобра и барабан.txt");
+        String[] array = sentences.toArray(new String[0]);
+        for (String sentence :array) System.out.println(sentence);
+
     }
 }
